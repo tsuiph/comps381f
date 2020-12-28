@@ -134,7 +134,7 @@ app.post('/create', (req,res) => {
         createres['address']['building'] = fields.building || '';
         createres['address']['zipcode'] = fields.zipcode || '';
         createres['address']['coord'] = [fields.lat || '',fields.long || ''];
-        createres['grades'] = [fields.score,fields.user];
+        createres['grades'] = fields.score;
         createres['owner'] = req.session.username;
         if (files.photo.size == 0) {
             const client = new MongoClient(mongourl);
