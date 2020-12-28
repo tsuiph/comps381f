@@ -30,20 +30,16 @@
 	<tr>
 	<ul><td>
             <% for (var r of restaurants) { %>
-            <li><a href="/display?_id=<%= r.resID %>"><%= r.resName %></a></li>
+            <li><a href="/display?_id=<%= r._id %>"><%= r.resName %></a></li>
             <% } %>
         </td></ul>
 	</tr>
 	<tr>
-	     <td><button onclick="Back()">Back</button></td>
+	     <td><a href=/search><button>Back</button></a></td>
 	</tr>
 </table>
 
 </form>
-
-      <script>
-            function Back() {window.history.back();}
-      </script>
    </body>
 
 </html>
