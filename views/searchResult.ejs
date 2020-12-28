@@ -16,13 +16,13 @@
    <form action="/search" method="post" enctype="multipart/form-data">
       <table>
          <tr>
-            <td><label for="resName">Restaurant Name:<%= resName %></label></td>
+            <td><label for="resName">Restaurant Name: <%= resName %></label></td>
          </tr>
 	 <tr>
-            <td><label for="borough">Borough:<%= borough %></label></td>
+            <td><label for="borough">Borough: <%= borough %></label></td>
 	 </tr>
 	 <tr>
-	    <td><label for="cuisine">Cuisine:<%= cuisine %></label><br><br></td>
+	    <td><label for="cuisine">Cuisine: <%= cuisine %></label><br><br></td>
 	 </tr>
 	<tr>
 	    <td><%= restaurants.length %> restaurant(s) matches.</td>
@@ -30,7 +30,7 @@
 	<tr>
 	<ul><td>
             <% for (var r of restaurants) { %>
-            <li><a href="/display?_id=<%= r._id %>"><%= r.resName %></a></li>
+            <li><a href="/display?_id=<%= r.resID %>"><%= r.resName %></a></li>
             <% } %>
         </td></ul>
 	</tr>
