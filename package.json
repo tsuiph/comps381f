@@ -1,0 +1,25 @@
+{
+  "name": "COMPS381F-Project",
+  "version": "1.0.0",
+  "description": "COMPS381F-Project",
+  "main": ".mongorc.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "mongodb": "^3.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

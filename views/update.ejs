@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Update Restaurant Info</title>
+    </head>
+
+    <body>
+        <h1>Update Restaruant Information</h1>
+        <form action="/update"?_id=<%= restaurants._id%> method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="resID">Restaurant ID</label></td>
+                    <td><input name="resID" type="text" value="<%= restaurants.resID %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="resName">Restaurant Name</label></td>
+                    <td><input name="name" type="text" value="<%= restaurants.resName %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="borough">Borough</label></td>
+                    <td><input name="borough" type="text" value="<%= restaurants.borough %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="cuisine">Cuisine</label></td>
+                    <td><input name="cuisine" type="text" value="<%= restaurants.cuisine %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="street">Street</label></td>
+                    <td><input name="street" type="text" value="<%= restaurants.street %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="building">Building</label></td>
+                    <td><input name="building" type="text" value="<%= restaurants.building %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="zipcode">Zip Code</label></td>
+                    <td><input name="zipcode" type="text" value="<%= restaurants.zipcode %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="lat">Latitude</label></td>
+                    <td><input name="lat" type="text" value="<%= restaurants.lat %>"><td>
+                </tr>
+                <tr>
+                    <td><label for="long">Longitude</label></td>
+                    <td><input name="lon" type="text" value="<%= restaurants.lon %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="photo">Photo</label></td>
+                    <td><input name="photo" type="file"></td>
+                </tr>
+                <tr>
+                    <td><button typr="submit">Submit</button>
+                    <button onclick="Back()">Back</button></td>
+                </tr>
+             </table>
+         </form>
+
+      <script>
+            function Back() {window.history.back();}
+      </script>
+    </body>
+</html>

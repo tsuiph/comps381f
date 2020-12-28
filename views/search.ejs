@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Search Restaurant</title>
+      <style>
+         table, th, td {
+	 border: 1px solid white;
+         border-collapse: collapse;
+         }
+      </style>
+   </head>
+
+<body>
+<h1>Search Restaurant</h1>
+
+   <form action="/search" method="post" enctype="multipart/form-data">
+      <table>
+         <tr>
+            <td><label for="resName">Restaurant Name:</label></td>
+            <td><input name="resName" type="text" ></td>
+         </tr>
+	 <tr>
+            <td><label for="borough">Borough:</label></td>
+	    <td><input name="borough" type="text"></td>
+	 </tr>
+	 <tr>
+	    <td><label for="cuisine">Cuisine:</label></td>
+	    <td><input name="cuisine:" type="text"></td>
+	 </tr>
+	<tr>
+		<td><button>Search</button>
+	     <td><button onclick="Back()">Back</button></td>
+	</tr>
+</form>
+</table>
+
+      <script>
+            function Back() {window.history.back();}
+      </script>
+   </body>
+
+</html>
+

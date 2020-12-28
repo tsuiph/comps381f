@@ -1,0 +1,46 @@
+<html>
+	<head>
+      <title>Rate the Restaurant</title>
+      <style>
+         table, th, td {
+	 border: 1px solid white;
+         border-collapse: collapse;
+         }
+      </style>
+   </head>
+
+<body>
+<h1>Rate the Restaurant</h1>
+<form action="/create" method="post" enctype="multipart/form-data">
+      <table>
+	<tr><label for="rate">Rate the restaurant:</label>
+
+	<select name="rate" id="rate">
+  	<option value="1">1</option>
+  	<option value="2">2</option>
+  	<option value="3">3</option>
+  	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	</select></tr>
+
+
+
+
+        <tr>
+             <br><br><td><button>Submit</button>
+	     <button onclick="Back()">Back</button></td>
+	</tr>
+    	</form>
+      </table>
+
+      <script>
+            function Back() {window.history.back();}
+      </script>
+   </body>
+
+</html>

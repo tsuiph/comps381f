@@ -1,0 +1,34 @@
+<html>
+    <head>
+         <title>Restaurants</title>
+    </head>
+
+    <body>
+         <table style="width:100%">
+            <tr>
+               <td>
+                  <h1>Restaurants</h1>
+	       </td>
+               <td>
+                  <a href="/logout"><button style="float: right;">Logout</button></a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <a href="/create"><button>Create New Restaurant</button></a>
+                  <a href="/search"><button>Search</button></a>
+               </td>
+            </tr>
+         </table>
+
+         
+         <h3>Showing <%= restaurants.length %> document(s)</h3>
+
+         <ol>
+             <% for (var i of restaurants) { %>
+                 <li><a href="/detail?_id=<%= i._id %>"><%= i.resName %></a></li>
+             <% } %>
+         </ol>
+              
+    </body>
+</html>

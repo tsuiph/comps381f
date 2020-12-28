@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Add new Restaurant</title>
+      <style>
+         table, th, td {
+	 border: 1px solid white;
+         border-collapse: collapse;
+         }
+      </style>
+   </head>
+
+<body>
+<h1>Add new Restaurant</h1>
+
+   <form action="/create" method="post" enctype="multipart/form-data">
+      <table>
+         <tr>
+            <td><label for="resID">Restaurant ID:</label></td>
+            <td><input name="resID" type="text" required></td>
+         </tr>
+	 <tr>
+            <td><label for="resName">Name*:</label></td>
+	    <td><input name="resName" type="text" required></td>
+	 </tr>
+	 <tr>
+	    <td><label for="borough">Borough:</label></td>
+	    <td><input name="borough" type="text"></td>
+	 </tr>
+	 <tr>
+	    <td><label for="cuisine">Cuisine:</label></td>
+	    <td><input name="cuisine" type="text"></td>
+	 </tr>
+	 <tr><td>Address:<td></tr>
+	 <tr>
+	    <td><label for="street">Street:</label></td>
+	    <td><input name="street" type="text"></td>
+	 </tr>
+         <tr>
+	    <td><label for="building">Building:</label></td>
+            <td><input name="building" type="text"></td>
+	 </tr>
+         <tr>
+            <td><label for="zipcode">Zipcode:</label></td>
+	    <td><input name="zipcode" type="text"></td>
+	 </tr>
+         <tr>
+            <td><label for="lon">Coordinate (longitude):</label></td>
+	    <td><input name="lon" type="text"></td>
+	 </tr>
+             <td><label for="lat">Coordinate (latitude):</label></td>
+	     <td><input name="lat" type="text"></td>
+	 <tr>
+	     <td><label for="grades">Grade:</label></td>
+	     <td><input name="grades" type="text"></td>
+	</tr>
+        <tr>
+	     <td><label for="owner">Owner:</label></td>
+	     <td><input name="owner" type="text"></td>
+	</tr>
+	<tr>
+	     <td><label for="photo">Photo:</label></td>
+	     <td><input name="photo" type="file"></td>
+	</tr>
+	<tr>
+	     <td><label for="photo_mimetype">Photo mimetype:</label></td>
+	     <td><input name="photo_mimetype" type="text"><td>
+	</tr>
+        <tr>
+             <td><button>Create</button>
+	     <button onclick="Back()">Back</button></td>
+	</tr>
+    	</form>
+      </table>
+
+      <script>
+            function Back() {window.history.back();}
+      </script>
+   </body>
+
+</html>

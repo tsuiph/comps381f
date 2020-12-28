@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Restaurant Detail</title>
+    </head>
+
+    <body>
+        <h1">Restaurant Details</h1>
+            <H1><%= restaurants[0].resName %></H1>
+            <% if (restaurants[0].photo) { %>
+                <img src="data:<%= Restaurants[0].photo_mimetype %>;base64, <%= restaurant[0].photo%>""><br>
+            <% } %>
+
+            <ul>
+                <li>Borough: <%= restaurants[0].borough %></li>
+                <li>Cuisine: <%= restaurants[0].cuisine %></li>
+                <li>Street: <%= restaurants[0].address.street %></li>
+                <li>Building: <%= restaurants[0].address.building %></li>
+                <li>Zipcode: <%= restaurants[0].address.zipcode %></li>
+                <li>Rating: </br>
+                    <% for (var r of restaurants) { %>
+                    <%= r.score%> (<%= r.user %>)
+                    <% } %>
+                </li>
+                <li >Owner: <%= restaurants[0].owner %></li>
+            </ul>
+
+            <% if (restaurants[0].address.coord[0] && restaurants[0].address.coord[1]) { %>
+                <a href=/map?lat=<%= restaurants[0].address.coord[0] %>&long=<%= restaurants[0].address.coord[1] %>> <button>Map</button></a>
+            <% } %>
+                <% if (session.username == restaurants[0].owner) { %>
+                <a href=/delete?_id=<%= restaurants[0]._id %>><button>Delete<button></a>
+                <a href=/update?_id=<%= restaurants[0]._id %>><button>Update</button></a>
+            <% } %>
+                <a href=/rate?_id=<%= restaurants[0]._id %>><button>Rate this Restaurant</button></a>
+                <button onclick="Back()">Back</button>
+
+      <script>
+            function Back() {window.history.back();}
+      </script>
+
+    </body>
+</html>
