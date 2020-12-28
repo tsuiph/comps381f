@@ -16,10 +16,12 @@
                 <li>Street: <%= restaurants[0].address.street %></li>
                 <li>Building: <%= restaurants[0].address.building %></li>
                 <li>Zipcode: <%= restaurants[0].address.zipcode %></li>
-                <li>Rating: </br>
-                    <% for (var i of restaurants) { %>
-                    <%= i.grades %> (<%= i.username %>)
+                <li>Rating:
+                    <ul style="list-style-type:circle">
+                        <% for (i in restaurants[0].grades) { %>
+                        <li><%= restaurants[0].grades[i].score %> (<%= restaurants[0].grades[i].username %>)</li>
                     <% } %>
+                    </ul>
                 </li>
                 <li >Owner: <%= restaurants[0].owner %></li>
             </ul>
