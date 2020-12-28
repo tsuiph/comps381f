@@ -6,9 +6,9 @@
     <body>
         <h1">Restaurant Details</h1>
             <H1><%= restaurants[0].resName %></H1>
-            <% if (restaurants[0].photo) { %>
-                <img src="data:<%= Restaurants[0].photo_mimetype %>;base64, <%= restaurant[0].photo%>""><br>
-            <% } %>
+            <% if (restaurant.photo) { %>
+            <img src="data:image/jpg;base64, <%= restaurant.photo %>"><br>
+        <% } %>
 
             <ul>
                 <li>Borough: <%= restaurants[0].borough %></li>
