@@ -6,8 +6,8 @@
     <body>
         <h1">Restaurant Details</h1>
             <H1><%= restaurants[0].resName %></H1>
-            <% if (restaurant.photo) { %>
-            <img src="data:image/jpg;base64, <%= restaurant.photo %>"><br>
+            <% if (restaurants.photo) { %>
+            <img src="data:image/jpg;base64, <%= restaurants.photo %>"><br>
         <% } %>
 
             <ul>
