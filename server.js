@@ -4,7 +4,7 @@ const session = require('cookie-session');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
-const mongourl = "mongodb+srv://LaiSinUe:LaiSinUe@cluster0.yzbua.mongodb.net/Restaurants?retryWrites=true&w=majority";
+const mongourl = "mongodb+srv://tsuipuiha:OUhk91072912@cluster0.iafbz.mongodb.net/Restaurants?retryWrites=true&w=majority";
 const dbName = "Restaurants";
 const assert = require('assert');
 const fs = require('fs');
