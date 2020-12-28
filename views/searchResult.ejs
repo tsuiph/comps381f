@@ -29,9 +29,9 @@
 	 </tr>
 	<tr>
 	<ul><td>
-            <% for (var r of restaurants) { %>
-            <li><a href="/display?_id=<%= r._id %>"><%= r.resName %></a></li>
-            <% } %>
+            <% for (var i of restaurants) { %>
+                 <li><a href="/detail?_id=<%= i._id %>"><%= i.resName %></a></li>
+             <% } %>
         </td></ul>
 	</tr>
 	<tr>
